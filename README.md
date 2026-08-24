@@ -11,7 +11,7 @@ Built an automated marketing analytics pipeline that extracts website and ecomme
 The pipeline runs daily and creates a centralized marketing dataset for SQL analysis and future Tableau reporting, reducing the need for repetitive manual GA4 exports.
 
 ## Pipeline
-GA4 → Google Analytics Data API → Python/Pandas → MySQL → Tableau
+GA4 → Google Analytics Data API → Python/Pandas → MySQL → Tableau (Planned)
 
 ## Business Problem
 Marketing teams need consistent data to understand traffic acquisition, ecommerce behavior, conversions, revenue, and campaign performance. Manually exporting GA4 reports makes recurring analysis inefficient and harder to maintain.
@@ -53,7 +53,8 @@ As the pipeline expands to include paid media and cost data, it will support que
               └────────┬────────┘
                        │
                        ▼
-                    Tableau
+                    Tableau 
+                   (planned)
 
 MySQL serves as the centralized analytics database where cleaned GA4 data can be stored, queried, aggregated, and analyzed using SQL before being used for visualization and reporting.
 
