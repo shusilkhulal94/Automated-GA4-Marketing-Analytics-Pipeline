@@ -1,0 +1,8 @@
+.env
+ga4_token.json
+client_secret*.json
+credentials*.json
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
