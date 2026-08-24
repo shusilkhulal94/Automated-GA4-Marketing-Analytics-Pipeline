@@ -2,16 +2,18 @@
 Automated GA4 data pipeline using Python, MySql and Tableau for marketing analysts, ecommerce tracking and daily reporting 
 
 
-Automated GA4 Marketing Analytics Pipeline
- Project Overview
+# Automated GA4 Marketing Analytics Pipeline
+
+## Project Overview
+
 Built an automated marketing analytics pipeline that extracts website and ecommerce data from Google Analytics 4 (GA4) through the Google Analytics Data API, transforms and cleans the data with Python/Pandas, and loads analysis-ready datasets into MySQL.
 
 The pipeline runs daily and creates a centralized marketing dataset for SQL analysis and future Tableau reporting, reducing the need for repetitive manual GA4 exports.
 
- Pipeline
+## Pipeline
 GA4 → Google Analytics Data API → Python/Pandas → MySQL → Tableau
 
-Business Problem
+## Business Problem
 Marketing teams need consistent data to understand traffic acquisition, ecommerce behavior, conversions, revenue, and campaign performance. Manually exporting GA4 reports makes recurring analysis inefficient and harder to maintain.
 
 
@@ -29,7 +31,7 @@ As the pipeline expands to include paid media and cost data, it will support que
 - What is the business's break-even ROAS?
 
 
- Pipeline Architecture
+ ## Pipeline Architecture
 
               Google Analytics 4
                        │
@@ -70,8 +72,8 @@ Technologies Used
 | Tableau | Planned visualization and reporting layer |
 
 
-Data Pipeline
- 1. GA4 Data Extraction
+## Data Pipeline
+ ### 1. GA4 Data Extraction
 
 Python connects to GA4 through the *Google Analytics Data API* and retrieves daily acquisition, engagement, ecommerce, and revenue data.
 
@@ -89,7 +91,7 @@ Key metrics include:
 - Purchase revenue
 - Engagement rate
 
- 2. Data Cleaning & Transformation
+ ### 2. Data Cleaning & Transformation
 
 The GA4 API response is converted into a Pandas Data Frame and transformed into analysis-ready data.
 
@@ -106,7 +108,7 @@ Purchase Conversion Rate = Purchases / Sessions
 Revenue per Session = Purchase Revenue / Sessions
 Revenue per User = Purchase Revenue / Active Users
 
- 3. MySQL Data Loading
+### 3. MySQL Data Loading
 
 Cleaned data is loaded into the `marketing_analytics` MySQL database.
 
@@ -147,7 +149,7 @@ purchase
 
 Separating acquisition/performance data from funnel-event data keeps the database easier to query and maintain.
 
-4. Ecommerce Funnel Tracking
+### 4. Ecommerce Funnel Tracking
 
 
 
@@ -166,7 +168,7 @@ Python transforms the event-level API response into a structured daily dataset t
 This provides the foundation for identifying ecommerce drop-off points as more customer data becomes available.
 
 
- 5. Daily Automation
+ ### 5. Daily Automation
 
 The pipeline is scheduled using **macOS launchd** and automatically:
 
@@ -187,7 +189,7 @@ A rolling recent-date window is refreshed instead of simply appending new record
 This helps accommodate updated GA4 data while preventing duplicate records in MySQL.
 
 
- Data Quality & Validation
+## Data Quality & Validation
 
 API results were compared against GA4 reports to validate ecommerce events and confirm that the pipeline was retrieving the expected data.
 
@@ -196,8 +198,8 @@ During validation, unusually high `add_to_cart` activity relative to product vie
 This prevents potentially unreliable tracking behavior from being interpreted as a definitive marketing-performance finding.
 
 
-Project Status
- Completed
+## Project Status
+ ### Completed
 
 - GA4 Data API integration
 - OAuth authentication
@@ -211,12 +213,12 @@ Project Status
 - Rolling recent-data refresh
 - Daily local automation
 
- Next Phase
+ ## Next Phase
 
 The core data pipeline is operational. Additional campaign data will be collected before building the final performance dashboard and making stronger marketing recommendations.
 
 
- Future Development
+ ## Future Development
 
 - **Meta Ads API** — integrate campaign, spend, impressions, clicks, CTR, and CPC
 - **Paid Media Analytics** — calculate ROAS, CPA, CAC, and campaign-level revenue
