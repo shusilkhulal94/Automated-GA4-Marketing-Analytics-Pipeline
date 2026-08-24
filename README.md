@@ -14,7 +14,7 @@ GA4 → Google Analytics Data API → Python/Pandas → MySQL → Tableau
 Business Problem
 Marketing teams need consistent data to understand traffic acquisition, ecommerce behavior, conversions, revenue, and campaign performance. Manually exporting GA4 reports makes recurring analysis inefficient and harder to maintain.
 
-This project automates that workflow and creates a reusable analytics foundation for questions such as:
+
 
 The current pipeline supports analysis of questions such as:
 - Which channels, sources, and devices drive valuable traffic and conversions?
@@ -67,7 +67,7 @@ Technologies Used
 | SQLAlchemy | Python-to-MySQL integration |
 | MySQL | Analytics data storage, querying, and analysis |
 | launchd | Daily pipeline scheduling on macOS |
-| Tableau | Planned Visualization and reporting layer |
+| Tableau | Planned visualization and reporting layer |
 
 
 Data Pipeline
