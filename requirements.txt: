@@ -1,0 +1,6 @@
+pandas
+SQLAlchemy
+mysql-connector-python
+google-analytics-data
+google-auth
+google-auth-oauthlib
